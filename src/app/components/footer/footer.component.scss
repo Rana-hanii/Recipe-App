@@ -1,0 +1,37 @@
+@use "../../shared/variables" as variables;
+
+.container-flu {
+  width: 100%;
+  padding: 0rem 12.5rem;
+  margin-top: 20px;
+
+  .footer {
+    background-color: white;
+    padding-block: 30px;
+    box-shadow: variables.$box-shadow-lg;
+    border-top-left-radius: 20px;
+    border-top-right-radius:  20px;
+
+    p{
+        font-family: variables.$font-family-patrick;
+        font-size: 20px;
+        color: gray;
+        text-align: center;
+        span{
+            color: variables.$Strong-green;
+        }
+    }
+
+  }
+}
+
+@media screen and (max-width: 992px){
+  .container-flu {
+    padding: 0rem 9rem;
+  }
+}
+@media screen and (max-width: 720px){
+  .container-flu {
+    padding: 0rem 1rem;
+  }
+}

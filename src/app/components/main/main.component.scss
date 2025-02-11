@@ -1,0 +1,206 @@
+@use "../../shared/variables" as variables;
+
+.container-flu {
+  width: 100%;
+  padding: 0px 60px;
+  // margin-top: 20px;
+
+  .sidebar {
+    .btn {
+      padding-inline: 24px;
+      padding-block: 36px;
+      background-color: white;
+      box-shadow: variables.$box-shadow-lg;
+      // margin: 9px 0px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+      &:hover {
+        background-color: variables.$Muted-green;
+        color: variables.$Strong-green;
+      }
+    }
+    .btn:first-child:active {
+      border-color: transparent;
+
+      &:hover {
+        background-color: variables.$Muted-green;
+        color: variables.$Strong-green;
+      }
+    }
+
+    .offcanvas {
+      margin: 20px;
+      border-radius: 20px !important;
+      box-shadow: variables.$box-shadow-lg;
+      border-color: transparent !important;
+      width: 200px !important;
+    }
+    .offcanvas-backdrop {
+      background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+    .offcanvas-backdrop.show {
+      opacity: 1 !important;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+      margin-inline: 10px;
+
+      a {
+        font-family: variables.$font-family-patrick;
+        text-align: center;
+        width: 100%;
+        text-decoration: none;
+        color: variables.$black;
+        font-size: 24px;
+        margin: 15px 20px;
+        padding: 12px;
+        border-radius: 10px;
+        box-shadow: variables.$box-shadow-sm;
+        transition: all 0.3s;
+
+        &:hover {
+          transform: scale(1.08);
+          box-shadow: variables.$box-shadow-hover;
+        }
+      }
+      .meal {
+        background-color: variables.$Strong-green;
+        color: white;
+      }
+    }
+
+    .side {
+      .logo {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .navigation {
+    h1 {
+      padding-block: 30px;
+      font-family: variables.$font-family-courgette;
+      font-size: 36px;
+      font-weight: 700;
+      padding-top: 30px;
+      color: variables.$Strong-green;
+      box-shadow: variables.$box-shadow-lg;
+      text-align: center;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+    }
+    p {
+      font-family: variables.$font-family-patrick;
+      font-size: 14px;
+      color: gray;
+    }
+
+    .contents {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .active {
+        background-color: variables.$Muted-green;
+        color: variables.$black;
+        padding: 20px;
+
+        i {
+          color: variables.$black !important;
+        }
+      }
+
+      .anchor {
+        font-family: variables.$font-family-patrick;
+        text-align: center;
+        color: variables.$black;
+        font-size: 18px;
+        margin: 15px 20px;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: variables.$box-shadow-lg;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        a {
+          text-decoration: none;
+          color: variables.$black;
+        }
+        i {
+          margin-bottom: 5px;
+          color: variables.$Strong-green;
+        }
+
+        &:hover {
+          transform: scale(1.08);
+          box-shadow: variables.$box-shadow-hover;
+        }
+      }
+    }
+  }
+
+  select{
+    display: none;
+  }
+}
+@media screen and (max-width: 992px){
+  .container-flu{
+    padding: 0px 0px!important;
+
+    .btn {
+      margin: 0px 0px;
+
+    }
+  }
+
+}
+@media screen and (max-width: 720px){
+
+  .btn {
+      width: 100%;
+      padding-inline: 15px!important;
+      padding-block: 10px!important;
+      margin-bottom: 20px!important;
+
+
+    }
+
+    .contents {
+      display: none!important;
+    }
+
+    select{
+      display: block!important;
+      font-family: variables.$font-family-patrick;
+      color: variables.$Strong-green;
+    }
+    .form-select{
+      border: transparent!important;
+      border-radius:20px!important;
+      margin-top:20px!important;
+    }
+    .form-select:focus{
+           box-shadow: 0 0 0 .25rem variables.$Muted-green!important;
+    }
+    h1{
+      padding-inline: 20px!important;
+      border-radius: 20px!important;
+
+      
+
+    }
+  }
+
+
+

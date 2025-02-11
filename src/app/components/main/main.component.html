@@ -1,0 +1,128 @@
+<div class="container-flu">
+    <div class="row mx-auto">
+        <div class="col-md-1 sidebar">
+            <button class="btn text-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                aria-controls="staticBackdrop">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                aria-labelledby="staticBackdropLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="staticBackdropLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body side">
+                    <div class="logo">
+                        <img src="images/logo-BfNap0Pe.png" alt="logo">
+                    </div>
+                    <div class="links">
+                        <a class="meal" href="#">Meals</a>
+                        <a href="#">Ingredients</a>
+                        <a href="#">Area</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-10">
+            <div class="navigation">
+                <h1>
+                    Learn, Cook, Eat Your Food
+                </h1>
+                <div class="contents">
+                    <div class="anchor" routerLinkActive="active"> <i class="fa-solid fa-utensils"></i>
+                        <a routerLink="home">ALL</a>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-solid fa-burger"></i>
+                        <a routerLink="beef">BEEF</a>
+                        <p>46 Items</p>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-solid fa-egg"></i>
+                        <a routerLink="breakfast">BREAKFAST</a>
+                        <p>8 Items</p>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-solid fa-drumstick-bite"></i>
+                        <a routerLink="chicken">CHICKEN</a>
+                        <p>36 Items</p>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-solid fa-cookie-bite"></i>
+                        <a routerLink="dessert">DESSERT</a>
+                        <p>64 Items</p>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-solid fa-stroopwafel"></i>
+                        <a routerLink="goat">GOAT</a>
+                        <p>1 Items</p>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-solid fa-bone"></i>
+                        <a routerLink="lamb">LAMB</a>
+                        <p>15 Items</p>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-solid fa-table-cells"></i>
+                        <a routerLink="miscellaneous">MISCELLANEOUS</a>
+                        <p>11 Items</p>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-solid fa-bowl-food"></i>
+                        <a routerLink="pasta">PASTA</a>
+                        <p>9 Items</p>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-solid fa-bacon"></i>
+                        <a routerLink="pork">PORK</a>
+                        <p>19 Items</p>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-solid fa-shrimp"></i>
+                        <a routerLink="seafood">SEAFOOD</a>
+                        <p>29 Items</p>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-regular fa-square-plus"></i>
+                        <a routerLink="side">SIDE</a>
+                        <p>17 Items</p>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-regular fa-circle-play"></i>
+                        <a routerLink="starter">STARTER</a>
+                        <p>4 Items</p>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-solid fa-leaf"></i>
+                        <a routerLink="vegan">VEGAN</a>
+                        <p>3 Items</p>
+                    </div>
+                    <div class="anchor" routerLinkActive="active">
+                        <i class="fa-solid fa-carrot"></i>
+                        <a routerLink="vegetarian">VEGETARIAN</a>
+                        <p>40 Items</p>
+                    </div>
+                </div>
+
+                <select (click)="selectg()" #select class="form-select" aria-label="Default select example">
+                    <option value="beef">BEEF</option>
+                    <option value="breakfast">BREAKFAST</option>
+                    <option value="chicken">CHICKEN</option>
+                    <option value="dessert">dessert</option>
+                    <option value="goat">GOAT</option>
+                    <option value="lamb">LAMB</option>
+                    <option value="miscellaneous">MISCELLANEOUS</option>
+                    <option value="pasta">PASTA</option>
+                    <option value="pork">PORK</option>
+                    <option value="seafood">seafood</option>
+                    <option value="side">side</option>
+                    <option value="starter">STARTER</option>
+                    <option value="vegan">VEGAN</option>
+                    <option value="vegetarian">VEGETARIAN</option>
+                </select>
+
+            </div>
+        </div>
+    </div>

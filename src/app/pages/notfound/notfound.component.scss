@@ -1,0 +1,23 @@
+@use "../../shared/variables" as variables;
+
+.container-flu {
+  width: 100%;
+  padding: 0px 60px;
+  min-height: 41vh;
+
+  .content {
+    text-align: center;
+    padding-block: 70px;
+    box-shadow: variables.$box-shadow;
+    border-radius: 20px;
+    margin-top: 32px;
+
+
+
+    h3 {
+      font-family: variables.$font-family-courgette;
+      font-size: 24px;
+      color: variables.$Strong-green;
+    }
+  }
+}
