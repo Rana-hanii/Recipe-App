@@ -6,6 +6,7 @@
     width: 100%;
     padding: 0px 60px;
     margin-top: 6rem;
+    min-height: 50vh;
 
 
 
@@ -58,7 +59,7 @@
             font-size: 24px;
             font-weight: 600;
             margin-top: 10px;
-            
+
 
             &:hover{
                 background-color: variables.$Strong-green;
