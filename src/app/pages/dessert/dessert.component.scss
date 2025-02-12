@@ -32,6 +32,8 @@
         }
         .imag{
             transform: translateY(-20%);
+            box-shadow:variables.$box-shadow-xl ;
+            border-radius: 1000px;
         }
         img{
             width: 250px;
@@ -54,6 +56,8 @@
             background-color: variables.$Muted-green;
             font-family: variables.$font-family-patrick;
             font-size: 24px;
+            font-weight: 600;
+            margin-top: 10px;
 
             &:hover{
                 background-color: variables.$Strong-green;
