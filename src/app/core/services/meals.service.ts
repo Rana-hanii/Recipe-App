@@ -14,5 +14,8 @@ export class MealsService {
     return this._httpClient.get('https://www.themealdb.com/api/json/v1/1/search.php?s=');
 
   } 
+  getMealDetails(id:string):Observable<any>{
+    return this._httpClient.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
+  }
 }
 

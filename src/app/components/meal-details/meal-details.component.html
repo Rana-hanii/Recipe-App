@@ -1,0 +1,41 @@
+<div class="meal-details-container">
+  <div class="meal-header">
+    <h1> {{ meal.strMeal }}</h1>
+    <div class="meal-area">
+      <i class="fa fa-globe"></i>
+      <span> {{ meal.strArea }}</span>
+      <span class="category">{{ meal.strCategory }}</span>
+    </div>
+  </div>
+
+  <div class="meal-content">
+    <div class="meal-image">
+      <img [src]="meal.strMealThumb" [alt]="meal.strMeal" />
+      <div class="meal-links">
+        @if (meal.strYoutube) {
+          <a [href]="meal.strYoutube" target="_blank" class="yt-btn">
+            <i class="fa-brands fa-youtube"></i> Youtube
+          </a>
+        }
+        @if (meal.strSource) {
+          <a [href]="meal.strSource" target="_blank" class="src-btn">
+            <i class="fa fa-globe"></i> Source
+          </a>
+        }
+      </div>
+    </div>
+    <div class="meal-info">
+      <h2>Ingredients</h2>
+      <table>
+        @for (ing of getIngredients(meal); track ing.ingredient) {
+          <tr>
+            <td>{{ ing.ingredient }}</td>
+            <td>{{ ing.measure }}</td>
+          </tr>
+        }
+      </table>
+      <h2>Instructions</h2>
+      <p>{{ meal.strInstructions }}</p>
+    </div>
+  </div>
+</div>

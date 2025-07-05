@@ -1,0 +1,119 @@
+@use '../../shared/_variables.scss' as variables;
+
+.meal-details-container {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px #0001;
+  padding: 32px;
+  font-family: "Cairo", sans-serif;
+}
+
+.meal-header {
+  text-align: left;
+  margin-bottom: 24px;
+  font-family: variables.$font-family-patrick;
+  h1 {
+    font-family: variables.$font-family-courgette;
+    color: #388e3c;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .meal-area {
+    color: #388e3c;
+    font-size: 1.1rem;
+    .category {
+      font-family: variables.$font-family-patrick;
+      color: #222;
+      background: #e0e0e0;
+      border-radius: 8px;
+      padding: 2px 10px;
+      margin-left: 12px;
+      font-size: 1rem;
+    }
+  }
+}
+
+.meal-content {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  font-family: variables.$font-family-patrick;
+}
+
+.meal-image {
+  flex: 1 1 350px;
+  img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px #0002;
+  }
+  .meal-links {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.2s;
+      font-family: variables.$font-family-patrick;
+    }
+    .yt-btn {
+      background: #e53935;
+      color: #fff;
+      font-family: variables.$font-family-patrick;
+    }
+    .src-btn {
+      background: #43a047;
+      color: #fff;
+      font-family: variables.$font-family-patrick;
+    }
+    .yt-btn:hover,
+    .src-btn:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+.meal-info {
+  flex: 2 1 400px;
+  h2 {
+    color: #388e3c;
+    margin-top: 0;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 18px;
+    td {
+      padding: 6px 10px;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 1.05rem;
+    }
+    td:first-child {
+      color: #222;
+      font-weight: 500;
+    }
+    td:last-child {
+      color: #388e3c;
+      font-weight: 500;
+      text-align: right;
+    }
+  }
+  p {
+    color: #222;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    margin-top: 0;
+  }
+}

@@ -11,7 +11,7 @@
                             <img [src]="meal.strMealThumb" alt="">
                         </div>
                         <h3> {{meal.strMeal}} </h3>
-                        <div class="btn">
+                        <div  [routerLink]="['/meal', meal.idMeal]"  class="btn">
                             View Recipe
                         </div>
                     </div>

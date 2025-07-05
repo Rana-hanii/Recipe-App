@@ -2,10 +2,11 @@ import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { MealsService } from '../../core/services/meals.service';
 import { IMeal } from '../../core/services/interfaces/imeal';
 import { Subscription } from 'rxjs';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [ RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -33,5 +34,14 @@ export class HomeComponent implements OnInit , OnDestroy {
     this.supMeals.unsubscribe();
 
   }
+  // get meal details
+  getMealDetails(id:string):void{
+    this.supMeals= this.mealsService.getMealDetails(id).subscribe({
+      next: (res) => {
+        console.log(res);
+      },
+    });
+  }
+
 }
 

@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  app-main, router-outlet {
+    flex: 1 0 auto;
+    display: block;
+  }
+  
+  app-footer {
+    flex-shrink: 0;
+    display: block;
+  }

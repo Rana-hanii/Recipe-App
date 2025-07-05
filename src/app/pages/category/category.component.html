@@ -10,9 +10,15 @@
                         <div class="imag">
                             <img [src]="meal.strMealThumb" alt="">
                         </div>
-                        <h3>{{meal.strMeal.split(" ").splice(0,2).join(" ") }}</h3>
+                        <h3>{{ meal.strMeal.split(' ').splice(0,2).join(' ') }}</h3>
+                        @if (meal.strArea) {
+                          <div class="area">
+                            <i class="fa fa-globe"></i>
+                            <span> {{ meal.strArea }}</span>
+                          </div>
+                        }
 
-                        <div class="btn">
+                        <div class="btn" [routerLink]="['/meal', meal.idMeal]">
                             View Recipe
                         </div>
                     </div>
