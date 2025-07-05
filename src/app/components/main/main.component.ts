@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, ViewChild, viewChild } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -8,18 +8,12 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
-router=inject(Router);
+  router = inject(Router);
 
-@ViewChild("select") selectInput !:ElementRef;
-
-
-selectg(){
-
- let x:HTMLSelectElement = this.selectInput.nativeElement;
-  this.router.navigate([`/${x.value}`])
- 
-}
-
-
-
+  onCategoryChange(event: Event) {
+    const value = (event.target as HTMLSelectElement).value;
+    if (value) {
+      this.router.navigate(['/category', value]);
+    }
+  }
 }

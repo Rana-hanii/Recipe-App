@@ -106,7 +106,7 @@
                     </div>
                 </div>
 
-                <select (click)="selectg()" #select class="form-select" aria-label="Default select example">
+                <select (change)="onCategoryChange($event)" class="form-select" aria-label="Default select example">
                     <option value="beef">BEEF</option>
                     <option value="breakfast">BREAKFAST</option>
                     <option value="chicken">CHICKEN</option>
